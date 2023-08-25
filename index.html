@@ -20,11 +20,12 @@
       align-items: center;
       max-width: 1440px;
       margin: 0 auto;
+      border-bottom: 1.5px solid #D3D6DB;
     }
     .logo {
       padding-top: 0px;
       padding-bottom: 0px;
-      padding-left: 16px;
+      padding-left: 12px;
     }
 
     .logo h1{
@@ -51,33 +52,81 @@
       font-weight: bold;
     }
     
-    /* Mobile Responsive */
-    @media screen and (max-width: 768px) {
-    /* NAV BAR STYLING */
-      .navbar {
-        flex-direction: column;
-        align-items: center;
-      }
-      .nav-links {
-        margin-top: 10px;
-      }
+    /* ****************HERO TEXT*********** */
+    
+    .hero-text-container {
+      background-color: #fff; /* Change this to your desired background color */
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      max-width: 1440px;
+      margin: 0 auto;
+  }
+
+    .changing-text {
+    left: 0;
+    width: 100%;
+    padding: 12px;
+  }
+
+  #text-changer{
+    color: "#A259FF";
+  }
+
+  /* Mobile Responsive */
+  @media screen and (max-width: 768px) {
+  /* NAV BAR STYLING */
+    .navbar {
+      flex-direction: column;
+      align-items: center;
     }
+    .nav-links {
+      margin-top: 0px;
+    }
+  }
 </style>
 
 <body>
     <!-- NAV BAR STARTS -->
     <div class="navbar">
       <div class="logo">
-        <h1>MCN</h1>
+        <h1>Matt Nguyen</h1>
       </div>
       <div class="nav-links">
         <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <a href="#">About Me</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Resume</a>
       </div>
     </div>
     <!-- NAV BAR ENDS -->
 
+    <div class="hero-text-container">
+      <div class="changing-text">
+        <h1 style="font-weight: 100; margin-bottom: -20px;">Hi, I'm Matt Nguyen and I am</h1> <h1><span id="text-changer" style="font-size: 64px; color: #A259FF">an artist.</span></h1>
+      </div>
+    </div>
+  
+    <!-- HERO TEXT -->
+    <script>
+      const textChanger = document.getElementById("text-changer");
+      const texts = ["an artist.", "a techy.", "a product designer."];
+      const colors = ["#A259FF", "#1ABCFE", "#0ACF83"];
+      let index = 0;
+      let counter = 0;
+  
+      function changeText() {
+        if (counter < 3){
+          textChanger.textContent = texts[index];
+          textChanger.style.color = colors[index]
+          index = (index + 1) % texts.length;
+          counter = counter + 1;
+        }
+      }
+      
+      setInterval(changeText, 1700); // Change text every 3 seconds
+    </script>
+    <!-- HERO TEXT ENDS -->
+    
 
 </body>
