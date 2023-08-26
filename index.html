@@ -4,14 +4,18 @@
     <link rel="stylesheet" href="styles/styles.css">
     <title>Navigation Bar</title>
 </head> -->
-  
+
+<!-- BODY STYLING -->
 <style>
     
     body {
       margin: 0;
       font-family: Helvetica, sans-serif;
     }
-    /* NAV BAR STYLING */
+</style>
+
+<!-- NAV BAR STYLING -->
+<style>
     .navbar {
       background-color: #fff; /* Change this to your desired background color */
       padding: 12px;
@@ -51,47 +55,15 @@
     .nav-links a.active {
       font-weight: bold;
     }
-    
-    /******************HERO TEXT******************/
-    
-    .hero-text-container {
-      background-color: #fff; /* Change this to your desired background color */
-      padding: 12px;
-      display: flex;
-      align-items: center;
-      max-width: 1440px;
-      margin: 0 auto;
-  }
 
-    .changing-text {
-    left: 0;
-    width: 100%;
-    padding: 12px;
-  }
-
-    #text-changer{
-      color: "#A259FF";
-    }
-
-    .changing-text-thin-h1 {
-      font-weight: 100; 
-      margin-bottom: -20px;
-     }
-
-     .changing-text-rotating-h1 {
-      font-size: 64px; 
-      color: #A259FF
-     }
-
-  /* -----------------------Mobile Responsive---------------------- */
-  @media screen and (min-width: 768px) and (max-width : 1199px){
-  /*************** NAV BAR STYLING MOBILE RESPONSIVE ***************/
+    @media screen and (min-width: 768px) and (max-width : 1199px){
     .navbar {
       flex-direction: column;
       align-items: center;
     }
     .nav-links {
       margin-top: 0px;
+      gap: 24px;
     }
     .logo h1{
         letter-spacing: 2px;
@@ -105,22 +77,85 @@
       font-weight: normal;
       font-size: 40;
     }
-/*****************HERO TEXT MOBILE RESPONSIVE************/
+  }
+</style>
+
+<!-- HERO BANNER STYLING -->
+<style> 
     .hero-text-container {
       background-color: #fff; /* Change this to your desired background color */
-      padding: 24px;
-      padding-left: 32;
-      padding-right: 32;
+      padding-top: 128px;
+      padding-left: 12px;
+      padding-right: 12px;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       max-width: 1440px;
       margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 64px;
+  }
+
+    .changing-text {
+    left: 0;
+    width: 100%;
+    padding: 12px;
+    flex: 1;
+  }
+
+    #text-changer{
+      color: "#A259FF";
+    }
+
+    .changing-text-thin-h1 {
+      font-weight: 200; 
+      margin-bottom: -20px;
+      margin-top: -20px;
+     }
+
+     .changing-text-rotating-h1 {
+      font-size: 64px; 
+      color: #000
+     }
+
+     .column{
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      max-width: 30%;
+    }
+
+    .image-container {
+    max-width: 400px;
+    width: 100%; /* You can adjust the size as needed */
+    height: auto; /* Same value as width to create a square */
+    overflow: hidden;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: 768px) and (max-width : 1199px){
+    .hero-text-container {
+      background-color: #fff; /* Change this to your desired background color */
+      padding-top: 64px;
+      padding-left: 32px;
+      padding-right: 32px;
+      display: flex;
+      max-width: 100%;
+      margin: 0 auto;
+      gap: 32px;
   }
 
     .changing-text {
       left: 0;
-      width: 100%;
-      padding: 12px;
+      padding-top: 64px;
+      padding-left: 124px;
+      padding-right: 124px;
+      flex:100%
     }
 
     #text-changer{
@@ -128,18 +163,39 @@
     }
 
     .changing-text-thin-h1 {
-      font-weight: 100; 
+      font-weight: 300; 
       margin-bottom: -10px;
-      font-size: 56px; 
+      font-size: 44px; 
      }
 
      .changing-text-rotating-h1 {
-      font-size: 92px; 
-      color: #A259FF
+      font-size: 72px; 
+      /* color: #F24E1E */
+      color: #000;
      }
+
+     .column{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+    }
+      .image-container {
+      max-width: 80%;
+      width: 100%; /* You can adjust the size as needed */
+      height: auto; /* Same value as width to create a square */
+      overflow: hidden;
+    }
+    .changing-text p{
+      font-size: 32px;
+      font-weight: 200; 
+      line-height: 200%;
+    }
 
   }
 </style>
+
 
 <body>
     <!-- NAV BAR STARTS -->
@@ -156,24 +212,31 @@
     </div>
     <!-- NAV BAR ENDS -->
 
+    <!-- HERO TEXT STARTS-->
     <div class="hero-text-container">
+      <div class="column">
+        <div class="image-container">
+          <img src="/assets/Frame 1.png" alt="image of matthew">
+        </div>
+      </div>
       <div class="changing-text">
-        <h1 class ="changing-text-thin-h1">Hi, I'm Matt and I am</h1> <h1><span id="text-changer" class="changing-text-rotating-h1">an artist.</span></h1>
+        <h1 class ="changing-text-thin-h1">Hello, I'm Matt and I am</h1> 
+        <h1><span id="text-changer" class="changing-text-rotating-h1">a creative.</span></h1>
+        <p style="font-weight: 200; line-height: 200%;">I have been a full stack developer and lead designer for over 6 years. Scroll more to see where I started, what I've done and let me tell you where we can go.</p>
       </div>
     </div>
   
-    <!-- HERO TEXT -->
     <script>
       const textChanger = document.getElementById("text-changer");
       const texts = ["an artist.", "a techy.", "a product designer."];
-      const colors = ["#A259FF", "#1ABCFE", "#0ACF83"];
+      // const colors = ["#A259FF", "#1ABCFE", "#0ACF83"];
       let index = 0;
       let counter = 0;
   
       function changeText() {
         if (counter < 3){
           textChanger.textContent = texts[index];
-          textChanger.style.color = colors[index]
+          // textChanger.style.color = colors[index]
           index = (index + 1) % texts.length;
           counter = counter + 1;
         }
@@ -183,5 +246,4 @@
     </script>
     <!-- HERO TEXT ENDS -->
     
-
 </body>
