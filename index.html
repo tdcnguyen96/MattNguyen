@@ -270,27 +270,27 @@
     gap: 64px;
   }
 
-    .content-text {
-    left: 0;
-    width: 100%;
-    padding: 12px;
-    flex: 1;
+  .content-text {
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  flex: 1;
   }
 
-    .text-thin-h1 {
-      font-weight: 500; 
-      letter-spacing: .5px;
-     }
+  .text-thin-h1 {
+    font-weight: 500; 
+    letter-spacing: .5px;
+  }
 
-     .column{
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      max-width: 40%;
-    }
+  .column{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 40%;
+  }
 
-    .image-container {
+  .image-container {
     max-width: 400px;
     width: 100%; /* You can adjust the size as needed */
     height: auto; /* Same value as width to create a square */
@@ -370,6 +370,103 @@
   }
     
 </style>
+
+<!-- LEARN MORE BUTTON STYLING -->
+<style>
+  .learn-more-container {
+    background-color: #fff; /* Change this to your desired background color */
+    padding-top: 64px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    max-width: 1040px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 64px;
+  }
+  .text-column {
+      text-align: right;
+      max-width: 50%;
+      padding: 12px;
+      flex: 1;
+  }
+  .text-column h1 {
+    font-weight: 500; 
+    letter-spacing: .5px;
+  }
+
+  .button-column{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  button {
+    align-self: stretch;
+    max-width: 100%;
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  @media screen and (min-width: 768px) and (max-width : 1199px){
+
+    .content-container {
+      background-color: #fff; /* Change this to your desired background color */
+      padding-top: 64px;
+      padding-left: 32px;
+      padding-right: 32px;
+      display: flex;
+      max-width: 100%;
+      margin: 0 auto;
+      gap: 32px;
+  }
+
+    .text-column {
+      text-align: left;
+      margin-left: 32px;
+      min-width: 100%;
+      order: 1;
+    }
+    .text-column h1 {
+      font-weight: 300; 
+      margin-bottom: 16px;
+      font-size: 44px;
+      line-height: 150%;
+    }
+
+    .button-column{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      order: 2;
+      padding: 32px;
+    }
+
+    button {
+      display: block;
+      margin: 5px;
+      padding: 32px;
+      border: none;
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+      font-size: 32px;
+    }
+  }
+    
+</style>
+
+
 
 <!-- FOOTER STYLING-->
 <style>
@@ -699,7 +796,23 @@
   window.addEventListener("scroll", slideContentFromLeft1);
   window.addEventListener("scroll", slideContentFromRight1);
 </script>
-<!---------------------------- FOOTER ENDS ------------------------->
+<!---------------------------- CONTENT 2 ENDS: EXPERIENCE ------------------------->
+
+<!------------------------- LEARN MORE BUTTONS STARTS ----------------------------->
+
+<div class="learn-more-container">
+  <div class="text-column">
+    <h1>What to learn more?</h1>
+  </div>
+  <div class="button-column">
+    <button>Learn more</button>
+    <button>Learn more</button>
+    <button>Learn more</button>
+  </div>
+</div>
+
+<!------------------------- LEARN MORE BUTTONS ENDS ----------------------------->
+
 <!---------------------------- FOOTER STARTS ------------------------->
 <div class="footer-container">
   <div class="contact-section">
@@ -711,9 +824,6 @@
     <a href="#">LinkedIn</a>
   </div>
 </div>
-<footer class="footer">
-  <p>&copy; 2023 Your Website. All rights reserved.</p>
-</footer>
 <!---------------------------- FOOTER ENDS ------------------------->
 
 </body>
