@@ -51,6 +51,11 @@
       padding: 12px;
       font-weight: normal;
     }
+
+    .nav-links a:hover{
+      color: #FF7262;
+    }
+
     .nav-links a.active {
       font-weight: bold;
       color:#F24E1E
@@ -411,7 +416,7 @@
     gap: 32px;
   }
 
-  button {
+  .button {
     align-self: stretch;
     max-width: 100%;
     margin: 5px;
@@ -423,6 +428,10 @@
     text-transform: uppercase;
     padding-top: 24px;
     padding-bottom: 24px;
+  }
+
+  .button:hover{
+    background-color: #F24E1E;
   }
 
   @media screen and (min-width: 768px) and (max-width : 1199px){
@@ -622,14 +631,14 @@
     <script>
       const textChanger = document.getElementById("text-changer");
       const texts = ["an artist.", "a techy.", "a product designer."];
-      // const colors = ["#A259FF", "#1ABCFE", "#0ACF83"];
+       const colors = ["#000", "#000", "#F24E1E"];
       let index = 0;
       let counter = 0;
   
       function changeText() {
         if (counter < 3){
           textChanger.textContent = texts[index];
-          // textChanger.style.color = colors[index]
+           textChanger.style.color = colors[index]
           index = (index + 1) % texts.length;
           counter = counter + 1;
         }
@@ -812,9 +821,9 @@
     <h1>Want to see more?</h1>
   </div>
   <div class="button-column">
-    <button>View Portfolio</button>
-    <button>About Me</button>
-    <button>Download Resume</button>
+    <button class="button">View Portfolio</button>
+    <button class="button">About Me</button>
+    <button class="button">Download Resume</button>
   </div>
 </div>
 
