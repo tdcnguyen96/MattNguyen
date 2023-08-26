@@ -52,7 +52,7 @@
       font-weight: bold;
     }
     
-    /* ****************HERO TEXT*********** */
+    /******************HERO TEXT******************/
     
     .hero-text-container {
       background-color: #fff; /* Change this to your desired background color */
@@ -69,13 +69,23 @@
     padding: 12px;
   }
 
-  #text-changer{
-    color: "#A259FF";
-  }
+    #text-changer{
+      color: "#A259FF";
+    }
 
-  /* Mobile Responsive */
+    .changing-text-thin-h1 {
+      font-weight: 100; 
+      margin-bottom: -20px;
+     }
+
+     .changing-text-rotating-h1 {
+      font-size: 64px; 
+      color: #A259FF
+     }
+
+  /* -----------------------Mobile Responsive---------------------- */
   @media screen and (min-width: 768px) and (max-width : 1199px){
-  /* NAV BAR STYLING */
+  /*************** NAV BAR STYLING MOBILE RESPONSIVE ***************/
     .navbar {
       flex-direction: column;
       align-items: center;
@@ -83,6 +93,51 @@
     .nav-links {
       margin-top: 0px;
     }
+    .logo h1{
+        letter-spacing: 2px;
+        text-transform:uppercase;
+        font-size: 64px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      padding: 12px;
+      font-weight: normal;
+      font-size: 40;
+    }
+/*****************HERO TEXT MOBILE RESPONSIVE************/
+    .hero-text-container {
+      background-color: #fff; /* Change this to your desired background color */
+      padding: 24px;
+      padding-left: 32;
+      padding-right: 32;
+      display: flex;
+      align-items: center;
+      max-width: 1440px;
+      margin: 0 auto;
+  }
+
+    .changing-text {
+      left: 0;
+      width: 100%;
+      padding: 12px;
+    }
+
+    #text-changer{
+      color: "#A259FF";
+    }
+
+    .changing-text-thin-h1 {
+      font-weight: 100; 
+      margin-bottom: -10px;
+      font-size: 56px; 
+     }
+
+     .changing-text-rotating-h1 {
+      font-size: 92px; 
+      color: #A259FF
+     }
+
   }
 </style>
 
@@ -103,7 +158,7 @@
 
     <div class="hero-text-container">
       <div class="changing-text">
-        <h1 style="font-weight: 100; margin-bottom: -20px;">Hi, I'm Matt Nguyen and I am</h1> <h1><span id="text-changer" style="font-size: 64px; color: #A259FF">an artist.</span></h1>
+        <h1 class ="changing-text-thin-h1">Hi, I'm Matt and I am</h1> <h1><span id="text-changer" class="changing-text-rotating-h1">an artist.</span></h1>
       </div>
     </div>
   
