@@ -7,7 +7,6 @@
 
 <!-- BODY STYLING -->
 <style>
-    
     body {
       margin: 0;
       font-family: Helvetica, sans-serif;
@@ -82,11 +81,12 @@
 
 <!-- HERO BANNER STYLING -->
 <style> 
+  @font-face{font-family: Monaco; src: url('assets/MonacoRegular.ttf')}
     .hero-text-container {
       background-color: #fff; /* Change this to your desired background color */
-      padding-top: 128px;
-      padding-left: 12px;
-      padding-right: 12px;
+      padding-top: 112px;
+      padding-left: 24px;
+      padding-right: 24px;
       display: flex;
       align-items: flex-start;
       max-width: 1440px;
@@ -138,6 +138,27 @@
     object-fit: cover;
   }
 
+  .secondaryText{
+    font-family: Monaco;
+    font-weight: 100; 
+    line-height: 150%;
+    color: #3C4142 ;
+  }
+
+  .fade-slide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1s ease, transform 0.5s ease;
+    background-color: #fff;
+  }
+
+  .fade-slide-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.1s ease, transform 0.5s ease;
+    background-color: #fff;
+  }
+
   @media screen and (min-width: 768px) and (max-width : 1199px){
     .hero-text-container {
       background-color: #fff; /* Change this to your desired background color */
@@ -155,7 +176,8 @@
       padding-top: 64px;
       padding-left: 124px;
       padding-right: 124px;
-      flex:100%
+      flex:100%;
+      order: 2;
     }
 
     #text-changer{
@@ -168,18 +190,13 @@
       font-size: 44px; 
      }
 
-     .changing-text-rotating-h1 {
-      font-size: 72px; 
-      /* color: #F24E1E */
-      color: #000;
-     }
-
      .column{
       flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
       max-width: 100%;
+      order: 1;
     }
       .image-container {
       max-width: 80%;
@@ -196,9 +213,246 @@
   }
 </style>
 
+<!-- SCORLL INDICATOR STYLING-->
+<style>
+  .scroll-message {
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    margin-top: 100px;
+  }
+  .scroll-message p{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  .scroll-message.hidden {
+    opacity: 0;
+  }
+  .arrow {
+    margin-top: 8px;
+    font-size: 24px;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Adjust the transition duration as needed */
+  }
+
+  @media screen and (min-width: 768px) and (max-width : 1199px){
+    .scroll-message p{
+      font-size: 32px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    .arrow {
+      margin-top: 8px;
+      font-size: 32px;
+    }
+  }
+</style>
+
+<!-- CONTENT STYLING-->
+<style> 
+  @font-face{font-family: Monaco; src: url('assets/MonacoRegular.ttf')}
+    .content-container {
+      background-color: #fff; /* Change this to your desired background color */
+      padding-top: 64px;
+      padding-left: 24px;
+      padding-right: 24px;
+      display: flex;
+      align-items: flex-start;
+      max-width: 1040px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 64px;
+  }
+
+    .content-text {
+    left: 0;
+    width: 100%;
+    padding: 12px;
+    flex: 1;
+  }
+
+    .text-thin-h1 {
+      font-weight: 200; 
+     }
+
+     .column{
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      max-width: 40%;
+    }
+
+    .image-container {
+    max-width: 400px;
+    width: 100%; /* You can adjust the size as needed */
+    height: auto; /* Same value as width to create a square */
+    overflow: hidden;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .secondaryText{
+    font-family: Monaco;
+    font-weight: 100; 
+    line-height: 150%;
+    color: #3C4142 ;
+  }
+
+  .hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media screen and (min-width: 768px) and (max-width : 1199px){
+    .content-container {
+      background-color: #fff; /* Change this to your desired background color */
+      padding-top: 64px;
+      padding-left: 32px;
+      padding-right: 32px;
+      display: flex;
+      max-width: 100%;
+      margin: 0 auto;
+      gap: 32px;
+  }
+
+    .content-text {
+      left: 0;
+      padding-top: 64px;
+      padding-left: 124px;
+      padding-right: 124px;
+      flex:100%;
+      order: 2;
+    }
+
+    .text-thin-h1 {
+      font-weight: 300; 
+      margin-bottom: 16px;
+      font-size: 44px;
+      line-height: 150%;
+     }
+
+     .column{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      order: 1;
+    }
+      .image-container {
+      max-width: 80%;
+      width: 700px; /* You can adjust the size as needed */
+      height: 700px; /* Same value as width to create a square */
+      overflow: hidden;
+    }
+    .secondaryText{
+      font-size: 32px;
+      font-weight: 200; 
+      line-height: 200%;
+    }
+  }
+    
+</style>
+
+<!-- FOOTER STYLING-->
+<style>
+  .footer-container {
+    background-color: #fff; /* Change this to your desired background color */
+      justify-content: center;
+      align-items: center;
+      max-width: 1440px;
+      margin-top: 164;
+      margin-left: auto;
+      margin-right: auto;
+      border-top: 1.5px solid #D3D6DB;
+      text-align: center;
+  }
+  .contact-section {
+    margin-bottom: 20px;
+  }
+
+  .contact-section a{
+    font-family: 'monaco';
+    font-size: 20px;
+    font-weight: bold;
+    color: #F24E1E;
+    text-decoration: none;
+  }
+
+  .contact-section h2{
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+
+  .navigation-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .navigation-links a {
+      text-decoration: none;
+      color: #000;
+      padding: 12px;
+      font-weight: normal;
+      font-size: 18px;
+  }
+
+  .contact-section p{
+    font-family: 'monaco';
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  @media screen and (min-width: 768px) and (max-width : 1199px){
+    .contact-section {
+    margin-bottom: 20px;
+  }
+
+  .contact-section h2{
+    font-size: 64px;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+
+  .contact-section p{
+    font-size: 36px;
+    font-weight: 400;
+  }
+
+  .navigation-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .navigation-links a {
+      text-decoration: none;
+      color: #000;
+      padding: 12px;
+      font-weight: normal;
+      font-size: 32px;
+      margin-bottom: 100px;
+  }
+  }
+</style>
 
 <body>
-    <!-- NAV BAR STARTS -->
+<!------------------ NAV BAR STARTS -------------------->
     <div class="navbar">
       <div class="logo">
         <h1>Matt Nguyen</h1>
@@ -210,22 +464,45 @@
         <a href="#">Resume</a>
       </div>
     </div>
-    <!-- NAV BAR ENDS -->
+<!-------------------- NAV BAR ENDS ------------------>
 
-    <!-- HERO TEXT STARTS-->
+<!--------------- HERO SECTION STARTS------------------>
     <div class="hero-text-container">
       <div class="column">
-        <div class="image-container">
+        <div class="image-container fade-slide-left" id="myComponent">
           <img src="assets/Frame 1.png" alt="image of matthew">
         </div>
       </div>
-      <div class="changing-text">
+      <div class="changing-text fade-slide-right" id="introText">
         <h1 class ="changing-text-thin-h1">Hello, I'm Matt and I am</h1> 
         <h1><span id="text-changer" class="changing-text-rotating-h1">a creative.</span></h1>
-        <p style="font-weight: 200; line-height: 200%;">I have been a full stack developer and lead designer for over 6 years. Scroll more to see how I started, what I've done and where we can go.</p>
+        <p class="secondaryText">I have been a full stack developer and lead designer for over 6 years. Scroll more to see how I started, what I've done and where we can go.</p>
       </div>
     </div>
   
+    <!-- script for hero text loading -->
+    <script>
+      window.addEventListener("load", function() {
+        const component = document.getElementById("introText");
+        setTimeout(function() {
+          component.style.opacity = "1";
+          component.style.transform = "translateX(0)";
+        }, 300); // Adjust the timeout value to control the delay before the animation starts
+      });
+    </script>
+
+    <!-- script for image loading -->
+    <script>
+      window.addEventListener("load", function() {
+        const component = document.getElementById("myComponent");
+        setTimeout(function() {
+          component.style.opacity = "1";
+          component.style.transform = "translateX(0)";
+        }, 400); // Adjust the timeout value to control the delay before the animation starts
+      });
+    </script>
+
+    <!-- script for text changes -->
     <script>
       const textChanger = document.getElementById("text-changer");
       const texts = ["an artist.", "a techy.", "a product designer."];
@@ -242,8 +519,187 @@
         }
       }
       
-      setInterval(changeText, 1700); // Change text every 3 seconds
+      setInterval(changeText, 2000); // Change text every 3 seconds
     </script>
-    <!-- HERO TEXT ENDS -->
+
+<!----------------------- HERO SECTION ENDS -------------------->
+
+<!------------------ SCROLL ARROW INDICATOR STARTS --------------->
+    <div class="scroll-message fade-in" id="scrollMessage">
+      <p>Scroll Down</p>
+      <div class="arrow">↓</div>
+    </div>
+
+    <script>
+      const scrollMessage = document.getElementById("scrollMessage");
+
+      window.addEventListener("load", function() {
+        scrollMessage.style.opacity = "1";
+      });
+
+
+      window.addEventListener("scroll", function() {
+
+        if (window.scrollY > 0) {
+          scrollMessage.style.opacity = "0";
+          scrollMessage.classList.add("hidden");
+        } else {
+          scrollMessage.style.opacity = "1";
+          scrollMessage.classList.remove("hidden");
+        }
+      });
+    </script>
+<!-------------------- SCROLL ARROW INDICATOR ENDS -------------------->
+
+<!---------------------------- CONTENT 1 STARTS: CURRENT JOB ------------------------->
+<div class="content-container hidden" id="currentJob">
+  <div class="content-text fade-slide-left" id="currentJobText">
+    <h1 class ="text-thin-h1">I am the UX Design Manager at JSX. An aviation industry disruptor.</h1> 
+    <p class="secondaryText">I focus on creating human centered but data driven designs backed by research and user tests. I manage both web and mobile platforms while leading multiple teams of developers and designers.</p>
+  </div>
+  <div class="column">
+    <div class="image-container fade-slide-right" id="currentJobImg">
+      <img src="assets/Frame 1.png" alt="image of matthew">
+    </div>
+  </div>
+</div>
     
+<script>
+  const hiddenComponent = document.getElementById("currentJob");
+
+  function revealComponent() {
+    const scrollPosition = window.scrollY;
+    const componentPosition = hiddenComponent.offsetTop;
+    const windowHeight = window.innerHeight;
+
+    if (scrollPosition + windowHeight >= componentPosition) {
+      hiddenComponent.classList.add("visible");
+      hiddenComponent.classList.remove("hidden");
+      window.removeEventListener("scroll", revealComponent);
+    }
+  }
+
+  function slideContentFromLeft() {
+    const component = document.getElementById("currentJobText");
+
+    const scrollPosition = window.scrollY;
+    const componentPosition = hiddenComponent.offsetTop;
+    const windowHeight = window.innerHeight;
+
+    if (scrollPosition + windowHeight >= componentPosition) {
+      setTimeout(function() {
+        component.style.opacity = "1";
+        component.style.transform = "translateX(0)";
+      }, 300); // Adjust the timeout value to control the delay before the animation starts
+
+      window.removeEventListener("scroll", revealComponent);
+    }
+  }
+
+  function slideContentFromRight() {
+    const component = document.getElementById("currentJobImg");
+
+    const scrollPosition = window.scrollY;
+    const componentPosition = hiddenComponent.offsetTop;
+    const windowHeight = window.innerHeight;
+
+    if (scrollPosition + windowHeight >= componentPosition) {
+      setTimeout(function() {
+        component.style.opacity = "1";
+        component.style.transform = "translateX(0)";
+      }, 300); // Adjust the timeout value to control the delay before the animation starts
+
+      window.removeEventListener("scroll", revealComponent);
+
+    }
+  }
+
+  window.addEventListener("scroll", revealComponent);
+  window.addEventListener("scroll", slideContentFromLeft);
+  window.addEventListener("scroll", slideContentFromRight);
+</script>
+<!---------------------------- CONTENT 1 END: CURRENT JOB ------------------------->
+
+<!---------------------------- CONTENT 2 STARTS: EXPERIENCE ------------------------->
+
+<div class="content-container hidden" id="experience" style="padding-top: 128px;">
+  <div class="column">
+    <div class="image-container fade-slide-right" id="experienceImg">
+      <img src="assets/Frame 1.png" alt="image of matthew">
+    </div>
+  </div>
+  <div class="content-text fade-slide-left" id="experienceText">
+    <h1 class ="text-thin-h1">Over 6 years, I've worked in development, research, and design.</h1> 
+    <p class="secondaryText">As a product designer I have worked with developers, marketers, and clients for ground breaking and industry disrupting clients.</p>
+  </div>
+</div>
+    
+<script>
+  const hiddenComponent1 = document.getElementById("experience");
+
+  function revealComponent1() {
+    const scrollPosition = window.scrollY;
+    const componentPosition = hiddenComponent1.offsetTop;
+    const windowHeight = window.innerHeight;
+
+    if (scrollPosition + windowHeight >= componentPosition) {
+      hiddenComponent1.classList.add("visible");
+      hiddenComponent1.classList.remove("hidden");
+      window.removeEventListener("scroll", revealComponent);
+    }
+  }
+
+  function slideContentFromLeft1() {
+    const component = document.getElementById("experienceText");
+
+    const scrollPosition = window.scrollY;
+    const componentPosition = hiddenComponent1.offsetTop;
+    const windowHeight = window.innerHeight;
+
+    if (scrollPosition + windowHeight >= componentPosition) {
+      setTimeout(function() {
+        component.style.opacity = "1";
+        component.style.transform = "translateX(0)";
+      }, 300); // Adjust the timeout value to control the delay before the animation starts
+
+      window.removeEventListener("scroll", revealComponent);
+    }
+  }
+
+  function slideContentFromRight1() {
+    const component = document.getElementById("experienceImg");
+
+    const scrollPosition = window.scrollY;
+    const componentPosition = hiddenComponent1.offsetTop;
+    const windowHeight = window.innerHeight;
+
+    if (scrollPosition + windowHeight >= componentPosition) {
+      setTimeout(function() {
+        component.style.opacity = "1";
+        component.style.transform = "translateX(0)";
+      }, 300); // Adjust the timeout value to control the delay before the animation starts
+
+      window.removeEventListener("scroll", revealComponent);
+    }
+  }
+
+  window.addEventListener("scroll", revealComponent1);
+  window.addEventListener("scroll", slideContentFromLeft1);
+  window.addEventListener("scroll", slideContentFromRight1);
+</script>
+
+
+<div class="footer-container">
+  <div class="contact-section">
+    <h2>Contact Me</h2>
+    <p>If you have any questions, I would love to hear from you. Feel free to get in touch at <a href="mailto:tdgnguyen96@gmail.com">tdcnguyen96@gmail.com.</a></p>
+  </div>
+  <div class="navigation-links">
+    <a href="#">Behance</a>
+    <a href="#">LinkedIn</a>
+  </div>
+</div>
+<footer class="footer">
+  <p>&copy; 2023 Your Website. All rights reserved.</p>
+</footer>
 </body>
