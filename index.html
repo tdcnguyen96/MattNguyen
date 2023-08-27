@@ -8,6 +8,14 @@
         align-items: center;
         flex-direction: column;
   }
+
+  .same-line{
+    display: inline;
+  }
+
+  .highlight{
+    color: #F24E1E;
+  }
   
 </style>
 
@@ -191,8 +199,8 @@
     .changing-text {
       left: 0;
       padding-top: 64px;
-      padding-left: 124px;
-      padding-right: 124px;
+      padding-left: 100px;
+      padding-right: 100px;
       flex:100%;
       order: 2;
     }
@@ -224,10 +232,10 @@
     .changing-text p{
       font-size: 32px;
       font-weight: 200; 
-      line-height: 200%;
+      line-height: 150%;
     }
     .changing-text-rotating-h1 {
-      font-size: 70px; 
+      font-size: 100px; 
       color: #000;
       width: 100%
      }
@@ -241,7 +249,7 @@
     text-align: center;
     opacity: 1;
     transition: opacity 0.5s ease;
-    margin-top: 100px;
+    margin-top: 75px;
   }
   .scroll-message p{
     font-size: 20px;
@@ -300,7 +308,7 @@
   }
 
   .text-thin-h1 {
-    font-weight: 500; 
+    font-weight:bold; 
     letter-spacing: .5px;
   }
 
@@ -350,24 +358,23 @@
       padding-right: 32px;
       display: flex;
       max-width: 100%;
-      margin: 0 auto;
-      gap: 32px;
+      gap: 32px
   }
 
     .content-text {
       left: 0;
-      padding-top: 64px;
-      padding-left: 124px;
-      padding-right: 124px;
+      padding-left: 100px;
+      padding-right: 100px;
       flex:100%;
       order: 2;
     }
 
     .text-thin-h1 {
-      font-weight: 300; 
-      margin-bottom: 16px;
-      font-size: 44px;
-      line-height: 150%;
+      font-weight: bold; 
+      margin-bottom: 4px;
+      font-size: 64px;
+      line-height: 120%;
+      margin-top: 0px;
      }
 
      .column{
@@ -387,7 +394,7 @@
     .secondaryText{
       font-size: 32px;
       font-weight: 200; 
-      line-height: 200%;
+      line-height: 150%;
     }
   }
     
@@ -585,7 +592,7 @@
       padding: 12px;
       font-weight: normal;
       font-size: 32px;
-      margin-bottom: 100px;
+      margin-bottom: 64px;
   }
   .contact-section a{
     font-family: 'monaco';
@@ -596,7 +603,10 @@
   }
 
   small{
-    font-size: 16px;
+    font-size: 24px;
+    padding-bottom: 64px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   }
@@ -613,6 +623,7 @@
           <a href="portfolio.html">Portfolio</a>
           <a href="resume.html">Resume</a>
           <a href="me.html">About Me</a>
+          <a href="theLab.html">The Lab</a>
       </div>
     </div>
 <!-------------------- NAV BAR ENDS ------------------>
@@ -656,7 +667,7 @@
     <!-- script for text changes -->
     <script>
       const textChanger = document.getElementById("text-changer");
-      const texts = ["an artist.", "a techy.", "a product designer."];
+      const texts = ["an artist.", "a tech-head.", "a product designer."];
       const colors = ["#000", "#000", "#F24E1E"];
       let index = 0;
       let counter = 0;
@@ -705,7 +716,7 @@
 <!---------------------------- CONTENT 1 STARTS: CURRENT JOB ------------------------->
   <div class="content-container hidden" id="currentJob">
     <div class="content-text fade-slide-left" id="currentJobText">
-      <h1 class ="text-thin-h1">I am the UX Design Manager at JSX. An aviation industry disruptor.</h1> 
+      <h1 class ="text-thin-h1 same-line">I am the </h1><h1 class="same-line highlight">UX Design Manager </h1><h1 class="same-line">at JSX. An aviation industry disruptor.</h1> 
       <p class="secondaryText">I focus on creating human centered and data driven designs backed by research and user tests. I manage both web and mobile platforms while leading multiple teams of developers and designers.</p>
     </div>
     <div class="column">
@@ -780,7 +791,7 @@
     </div>
   </div>
   <div class="content-text fade-slide-left" id="experienceText">
-    <h1 class ="text-thin-h1">Over 6 years, I've worked in development, research, and design.</h1> 
+    <h1 class ="text-thin-h1 same-line">Over </h1><h1 class="same-line highlight">6 years </h1><h1 class="same-line">, I've worked in development, research, and design.</h1> 
     <p class="secondaryText">As a product designer I have worked with other designers, developers, and marketers for ground breaking and industry disrupting clients.</p>
   </div>
 </div>
