@@ -95,6 +95,147 @@
   }
 </style>
 
+
+<!-- HERO BANNER STYLING -->
+<style> 
+  @font-face{font-family: Monaco; src: url('assets/MonacoRegular.ttf')}
+  .hero-text-container {
+      background-color: #fff; /* Change this to your desired background color */
+      padding-top: 112px;
+      padding-left: 24px;
+      padding-right: 24px;
+      display: flex;
+      align-items: flex-start;
+      max-width: 1440px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 64px;
+  }
+
+    .changing-text {
+    left: 0;
+    width: 100%;
+    padding: 12px;
+    flex: 1;
+  }
+
+    #text-changer{
+      color: "#A259FF";
+    }
+
+    .changing-text-thin-h1 {
+      font-weight: 200; 
+      margin-bottom: -20px;
+      margin-top: -20px;
+     }
+
+     .changing-text-rotating-h1 {
+      font-size: 64px; 
+      color: #F24E1E
+     }
+
+     .column{
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      max-width: 30%;
+    }
+
+    .image-container {
+    max-width: 400px;
+    width: 100%; /* You can adjust the size as needed */
+    height: auto; /* Same value as width to create a square */
+    overflow: hidden;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .secondaryText{
+    font-family: Monaco;
+    font-weight: 100; 
+    line-height: 150%;
+    color: #3C4142 ;
+  }
+
+  .fade-slide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1s ease, transform 0.5s ease;
+    background-color: #fff;
+  }
+
+  .fade-slide-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.1s ease, transform 0.5s ease;
+    background-color: #fff;
+  }
+
+  @media screen and (min-width: 768px) and (max-width : 1199px){
+    .hero-text-container {
+      background-color: #fff; /* Change this to your desired background color */
+      padding-top: 64px;
+      padding-left: 32px;
+      padding-right: 32px;
+      display: flex;
+      max-width: 100%;
+      margin: 0 auto;
+      gap: 32px;
+  }
+
+    .changing-text {
+      left: 0;
+      padding-top: 64px;
+      padding-left: 124px;
+      padding-right: 124px;
+      flex:100%;
+      order: 2;
+    }
+
+    #text-changer{
+      color: "#A259FF";
+    }
+
+    .changing-text-thin-h1 {
+      font-weight: 300; 
+      margin-bottom: -10px;
+      font-size: 44px; 
+     }
+
+     .column{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      order: 1;
+    }
+      .image-container {
+      max-width: 80%;
+      width: 700px; /* You can adjust the size as needed */
+      height: 700px; /* Same value as width to create a square */
+      overflow: hidden;
+    }
+    .changing-text p{
+      font-size: 32px;
+      font-weight: 200; 
+      line-height: 200%;
+    }
+    .changing-text-rotating-h1 {
+      font-size: 70px; 
+      color: #000;
+      width: 100%
+     }
+
+  }
+</style>
+
+
 <!-- FOOTER STYLING-->
 <style>
   .footer-container {
@@ -219,6 +360,46 @@
 <!-------------------- NAV BAR ENDS ------------------>
 
 
+<!------------------------ ABOUT ME CONTENT STARTS--------------------->
+
+<div class="hero-text-container">
+  <div class="changing-text fade-slide-right" id="introText">
+    <h1 class ="changing-text-thin-h1">I believe that:</h1> 
+    <h1><span id="text-changer" class="changing-text-rotating-h1">design is the cross roads between art and technology.</span></h1>
+      <p class="secondaryText">I have always been drawn to art but at the same time I've always been interested in technology. Being practical minded I pursued technology. During my first 4 years of under gread I studied computer science at the University of Texas at Dallas, I was learning computer architecture and development. New technologies fueled my interests but I still felt like something was missing. </p>
+      <p class="secondaryText">Upon graduation I found myself at American Airlines initially working on the computure architecture and infrastructure then transitioning to leading the effort to implement the Privacy Portal (a website that made American Airlines GDPR Compliant). Working on this project sparked a new interest. Walking along the path of technology I found my self on a larger road. A road that merged art and creativity with technology. I found myself designing. </p>
+      <p class="secondaryText">After working the American Airlines for 3 years I began searching for more. I wanted to continuing exploring design so I left to get my masters at the University of Texas at Austin. At UT I began working with a startup while purusing my MSIS degree (Information Science). During this time I continued to hone my skills as a designer leveraging technology and art while finding a new love for research (user research). Here I truely found my identity in data driven beautiful designs that push for the latest and greatest technology.</p>
+    </div>
+  <div class="column">
+    <div class="image-container fade-slide-left" id="myComponent">
+      <img src="assets/Frame 1.png" alt="image of matthew">
+    </div>
+  </div>
+</div>
+
+<!-- script for hero text loading -->
+<script>
+  window.addEventListener("load", function() {
+    const component = document.getElementById("introText");
+    setTimeout(function() {
+      component.style.opacity = "1";
+      component.style.transform = "translateX(0)";
+    }, 300); // Adjust the timeout value to control the delay before the animation starts
+  });
+</script>
+
+<!-- script for image loading -->
+<script>
+  window.addEventListener("load", function() {
+    const component = document.getElementById("myComponent");
+    setTimeout(function() {
+      component.style.opacity = "1";
+      component.style.transform = "translateX(0)";
+    }, 400); // Adjust the timeout value to control the delay before the animation starts
+  });
+</script>
+
+<!------------------------- ABOUT ME CONTENT ENDS----------------------->
  
 
 <!---------------------------- FOOTER STARTS ------------------------->

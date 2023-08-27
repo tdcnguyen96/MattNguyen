@@ -95,6 +95,43 @@
   }
 </style>
 
+<!-- GREETER STLING -->
+<style>
+    @font-face{font-family: Monaco; src: url('assets/MonacoRegular.ttf')}
+
+    .greeting-container{
+        background-color: #fff; /* Change this to your desired background color */
+        padding-top: 112px;
+        padding-left: 24px;
+        padding-right: 24px;
+        display: inline-block;
+        align-items: flex-start;
+        margin: 0 auto;
+        gap: 64px;
+        max-width: 1440px;
+    }  
+    .header-container{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        align-self:flex-start;
+    }
+    .same-line{
+        display: inline;
+    }
+    .header{
+        font-size: 64px;
+    }
+    .highlight{
+        color: #F24E1E;
+    }
+
+    .secondary{
+        font-family: Monaco;
+    }
+</style>
+
 <!--PROJECT STYLING-->
 <style>
     @font-face{font-family: Monaco; src: url('assets/MonacoRegular.ttf')}
@@ -120,6 +157,14 @@
         align-self: stretch;
         max-width: 700px;
         margin-bottom: 128px;
+    }
+
+    .project:hover .details-column .detals-header h1{
+        color: #F24E1E;
+    }
+
+    .project:hover .image-container img{
+        transform: scale(1.05); /* Zoom in the image on hover */
     }
 
     .details-column{
@@ -194,6 +239,10 @@
     .details-body h3 a{
         margin: 0;
         padding: 0;
+    }
+
+    .details-body h3 a:hover{
+        color:#FF7262;
     }
 
     .image-container{
@@ -454,7 +503,16 @@
         </div>
     </div>
 <!-------------------- NAV BAR ENDS ------------------>
-  
+
+<!-- GREETER -->
+<div class="greeting-container">
+    <div class="header-container">
+        <h1 class="same-line header">Book a look through my </h1><h1 class="same-line header highlight">look book.</h1>
+    </div>
+</div>
+<!-- GREETER -->
+
+<!----------------- PROJECT CATALOG STARTS --------------------->
     <div class="project-container slide-fade">
         <div class="project">
             <div class="details-column">
@@ -511,7 +569,7 @@
         </div>
     </div>
 
-
+<!----------------- PROJECT CATALOG ENDS --------------------->
 
 
   <!---------------------------- FOOTER STARTS ------------------------->
