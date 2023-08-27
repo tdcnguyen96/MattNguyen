@@ -142,11 +142,11 @@
     }
 
     .image-container {
-    max-width: 400px;
-    max-height: 400px;
-    width: 100%; /* You can adjust the size as needed */
-    height: 100%; /* Same value as width to create a square */
-    overflow: hidden;
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      aspect-ratio: 1/1;
+      overflow: hidden;
   }
 
   .image-container img {
@@ -216,9 +216,9 @@
       order: 1;
     }
       .image-container {
-      max-width: 80%;
-      width: 700px; /* You can adjust the size as needed */
-      height: 700px; /* Same value as width to create a square */
+      position: relative;
+      width: 100%;
+      max-width: 100%; /* Optional: Restrict maximum width */
       overflow: hidden;
     }
     .changing-text p{
