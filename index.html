@@ -594,7 +594,7 @@
       </div>
       <div class="nav-links">
         <a href="#" class="active">Home</a>
-        <a href="AboutMe.html">About Me (Resume)</a>
+        <a href="aboutMe.html">About Me (Resume)</a>
         <a href="portfolio.html">Portfolio</a>
       </div>
     </div>
@@ -640,14 +640,14 @@
     <script>
       const textChanger = document.getElementById("text-changer");
       const texts = ["an artist.", "a techy.", "a product designer."];
-       const colors = ["#000", "#000", "#F24E1E"];
+      const colors = ["#000", "#000", "#F24E1E"];
       let index = 0;
       let counter = 0;
   
       function changeText() {
         if (counter < 3){
           textChanger.textContent = texts[index];
-           textChanger.style.color = colors[index]
+          textChanger.style.color = colors[index]
           index = (index + 1) % texts.length;
           counter = counter + 1;
         }
