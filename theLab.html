@@ -1,0 +1,510 @@
+<!-- BODY STYLING -->
+<style>
+    @font-face{font-family: Monaco; src: url('assets/MonacoRegular.ttf')}
+    body {
+        margin: 0;
+        font-family: Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+</style>
+  
+  <!-- NAV BAR STYLING -->
+  <style>
+      .navbar {
+        background-color: #fff; /* Change this to your desired background color */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
+        border-bottom: 1.5px solid #D3D6DB;
+        width: 100%;
+      }
+      .logo {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 12px;
+      }
+  
+      .logo h1{
+          letter-spacing: 2px;
+          text-transform:uppercase;
+          color: #000;
+      }
+  
+      .logo h1 a {
+        text-decoration: none;
+        color: #000;
+      }
+  
+      .logo h1 a:hover{
+          letter-spacing: 2px;
+          text-transform:uppercase;
+          color: #FF7262;
+      }
+  
+      .logo img {
+        max-width: 100%;
+        height: auto;
+      }
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: #000;
+        padding: 12px;
+        font-weight: normal;
+      }
+  
+      .nav-links a:hover{
+        color: #FF7262;
+      }
+  
+      .nav-links a.active {
+        font-weight: bold;
+        color:#F24E1E
+      }
+  
+      @media screen and (min-width: 768px) and (max-width : 1199px){
+      .navbar {
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav-links {
+        margin-top: 0px;
+        gap: 24px;
+      }
+      .logo h1{
+          letter-spacing: 2px;
+          text-transform:uppercase;
+          font-size: 64px;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: #000;
+        padding: 12px;
+        font-weight: normal;
+        font-size: 40;
+      }
+    }
+  </style>
+  
+  <!-- WORDS STYLING -->
+  <style>
+
+    .text-container{
+        background-color: #fff; /* Change this to your desired background color */
+        padding-top: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        display: flex;
+        align-items: flex-start;
+        max-width: 1440px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        gap: 4px;
+        flex-direction: column;
+    }
+
+    .text-container-row{
+        background-color: #fff; /* Change this to your desired background color */
+        display: flex;
+        align-items: flex-start;
+        max-width: 1440px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        gap: 4px;
+        width: 100%;
+    }
+
+    .column {
+        left: 0;
+        width: 100%;
+        padding: 12px;
+        flex: 1;
+    }
+
+    .column-buttons{
+        left: 0;
+        width: 100%;
+        padding: 12px;
+        flex: 1;
+        align-content: center;
+    }
+
+    .floating-letter {
+        position: absolute;
+        font-size: 24px;
+        color: #F24E1E;
+        pointer-events: none;
+    }
+
+    .btn-float {
+        align-self: stretch;
+        max-width: 100%;
+        margin: 5px;
+        border: none;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        width: 400px;
+    }
+
+    .btn-float:hover {
+        background-color: #F24E1E;
+    }
+
+    .big-font{
+        color: #C2C2C2;
+        letter-spacing: 1px;
+        font-size: 56px;
+    }
+
+    .signature{
+        color: #D9D9D9;
+        font-weight: 100;
+        font-size: 32px;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+    }
+
+    .secondary-text{
+        font-family: Monaco;
+        font-size: 24;
+        line-height: 30px;
+    }
+
+    .fade-out {
+        opacity: 0;
+        transition: opacity 10s; /* Adjust the transition duration as needed */
+    } 
+
+    .fade-in {
+        opacity: 1;
+        transition: opacity 3s ease; /* Adjust the transition duration as needed */
+    } 
+
+    .button-column{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      order: 2;
+    }
+
+
+    @media screen and (min-width: 768px) and (max-width : 1199px){
+        .big-font{
+            font-size: 80px;
+        }
+        .secondary-text{
+            line-height: 40px;
+        }
+
+        .button-column{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+        }
+
+        .btn-float {
+            display: block;
+            margin: 5px;
+            padding: 32px;
+            border: none;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+            font-size: 32px;
+            width: 100%;
+        }
+
+    }
+
+  </style>
+  <!-- FOOTER STYLING-->
+  <style>
+    .footer-container {
+      background-color: #fff; /* Change this to your desired background color */
+      justify-content: center;
+      align-items: center;
+      max-width: 1440px;
+      margin-top: 164;
+      margin-left: auto;
+      margin-right: auto;
+      border-top: 1.5px solid #D3D6DB;
+      text-align: center;
+      height: 300px;
+  
+    }
+    .contact-section {
+      margin-bottom: 20px;
+    }
+  
+    .contact-section a{
+      font-family: 'monaco';
+      font-size: 20px;
+      font-weight: bold;
+      color: #F24E1E;
+      text-decoration: none;
+    }
+  
+    .contact-section h2{
+      font-size: 32px;
+      font-weight: bold;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+    }
+  
+    .navigation-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .navigation-links a {
+        text-decoration: none;
+        color: #000;
+        padding: 12px;
+        font-weight: normal;
+        font-size: 18px;
+    }
+  
+    .contact-section p{
+      font-family: 'monaco';
+      font-size: 16px;
+      font-weight: 400;
+      color: #595959;
+    }
+  
+    .contact-section a{
+      font-family: 'monaco';
+      font-size: 16px;
+      font-weight: bold;
+      color: #F24E1E;
+      text-decoration: none;
+    }
+  
+    @media screen and (min-width: 768px) and (max-width : 1199px){
+      .contact-section {
+      margin-bottom: 20px;
+    }
+  
+    .contact-section h2{
+      font-size: 64px;
+      font-weight: 400;
+      text-transform: capitalize;
+    }
+  
+    .contact-section p{
+      font-size: 36px;
+      font-weight: 400;
+      padding-right: 36px;
+      padding-left: 36px;
+    }
+  
+    .navigation-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .navigation-links a {
+        text-decoration: none;
+        color: #000;
+        padding: 12px;
+        font-weight: normal;
+        font-size: 32px;
+        margin-bottom: 64px;
+    }
+    .contact-section a{
+      font-family: 'monaco';
+      font-size: 36px;
+      font-weight: bold;
+      color: #F24E1E;
+      text-decoration: none;
+    }
+  
+    small{
+      font-size: 24px;
+      padding-bottom: 64px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  
+    }
+  </style>
+  
+  
+  <body>
+  <!------------------ NAV BAR STARTS -------------------->
+      <div class="navbar">
+          <div class="logo">
+              <h1><a href="index.html">Matt Nguyen</a></h1>
+          </div>
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="resume.html">Resume</a>
+            <a href="me.html">About Me</a>
+            <a href="theLab.html" class="active">The Lab</a>
+          </div>
+        </div>
+  <!-------------------- NAV BAR ENDS ------------------>
+    
+   
+  <!----------------------------- WORDS START ---------------------------->
+  
+  <div class="text-container" id="text-container">
+    <div class="column">
+        <h1 id="quote" class="big-font">Good inventors are polymaths: they think with their hands and their brains. They’re experts in design, engineering and business.</h1>
+        <h3 id="signature" class="signature">-James Dyson</h3>
+    </div>
+    <div class="text-container-row">
+        <div class="column">
+            <p id="paragraph" class="secondary-text">I believe that a good designer knows the product in and out. They know how the content is shown and how the the product is built. That is why I coded this website myself. I want to stay up to date with the latest technologies and methodologies. Of course I'm still learning and theres so much more to explore. This page is for experimenting and discovery so what ever you do, dont push that button right there.</p>
+        </div>
+    </div>
+    <div class="button-column">
+        <button id="button" class="btn-float" onclick="allFunctions()">Don't Click Me</button>
+    </div>
+  </div>
+  
+  
+    <script>
+
+        function allFunctions(){
+            disableButton();
+            quoteFloating();
+            signatureFloating();
+            paragraphFloating();
+        }
+
+        function disableButton() {
+            const button = document.getElementById('button');
+            button.disabled = true;
+            button.textContent = 'I can fix that.';
+        }
+
+        function paragraphFloating() {
+            const textElement = document.getElementById('paragraph');
+            const letters = textElement.textContent.split('');
+            
+            textElement.style.opacity = 0; // Hide the original text
+            
+            letters.forEach((letter, index) => {
+                const span = document.createElement('span');
+                span.textContent = letter;
+                span.className = 'floating-letter';
+                span.style.left = `${textElement.offsetLeft + index * 24}px`; // Adjust spacing
+                span.style.top = `${textElement.offsetTop}px`;
+                
+                document.body.appendChild(span);
+                
+                animateLetter(span);
+            });
+        }
+
+        function signatureFloating() {
+            const textElement = document.getElementById('signature');
+            const letters = textElement.textContent.split('');
+            
+            textElement.style.opacity = 0; // Hide the original text
+            
+            letters.forEach((letter, index) => {
+                const span = document.createElement('span');
+                span.textContent = letter;
+                span.className = 'floating-letter';
+                span.style.left = `${textElement.offsetLeft + index * 24}px`; // Adjust spacing
+                span.style.top = `${textElement.offsetTop}px`;
+                
+                document.body.appendChild(span);
+                
+                animateLetter(span);
+            });
+        }
+
+        function quoteFloating() {
+        const textElement = document.getElementById('quote');
+        const letters = textElement.textContent.split('');
+        
+        textElement.opacity = 0;
+
+        textElement.classList.add('fade-in');
+        textElement.textContent = "Oops... Ok, to be fair James Dyson also said `Enjoy failure and learn from it. You can never learn from success.`"
+        
+        letters.forEach((letter, index) => {
+        const span = document.createElement('span');
+        span.textContent = letter;
+        span.className = 'floating-letter';
+        span.style.left = `${textElement.offsetLeft + index * 24}px`; // Adjust spacing
+        span.style.top = `${textElement.offsetTop}px`;
+        
+        document.body.appendChild(span);
+        
+        animateLetter(span);
+            });
+        }
+
+        function animateLetter(letterElement) {
+        const maxX = window.innerWidth - letterElement.clientWidth;
+        const maxY = window.innerHeight - letterElement.clientHeight;
+        
+        const randomX = Math.random() * maxX;
+        const randomY = Math.random() * maxY;
+        
+        const directionX = Math.random() > 0.5 ? 1 : -1;
+        const directionY = Math.random() > 0.5 ? 1 : -1;
+        
+        const speedX = Math.random() * 2 + 1;
+        const speedY = Math.random() * 2 + 1;
+        
+        const interval = setInterval(() => {
+        let currentX = parseFloat(letterElement.style.left);
+        let currentY = parseFloat(letterElement.style.top);
+        
+        currentX += speedX * directionX;
+        currentY += speedY * directionY;
+        
+        if (currentX <= 0 || currentX >= maxX) {
+            directionX *= -1;
+        }
+        if (currentY <= 0 || currentY >= maxY) {
+            directionY *= -1;
+        }
+        
+        letterElement.style.left = `${currentX}px`;
+        letterElement.style.top = `${currentY}px`;
+        }, 30); // Adjust the interval as needed
+    }
+    </script>
+  
+  
+  <!-----------------------------WORDS ENDS---------------------------->
+  
+  
+  <!---------------------------- FOOTER STARTS ------------------------->
+  <div class="footer-container">
+      <div class="contact-section">
+        <h2>Lets connect!</h2>
+        <p>If you have any questions, I would love to hear from you. Feel free to get in touch at <a href="mailto:tdgnguyen96@gmail.com">tdcnguyen96@gmail.com.</a> You can also reach me through the links below.</p>
+      </div>
+      <div class="navigation-links">
+        <a href="#">Behance</a>
+        <a href="#">LinkedIn</a>
+      </div>
+      <small style="color: #595959;">Powered by Square Spa- oh. wait... look at that. Nevermind. This website is designed and developed by Matt Nguyen. </small>
+  </div>
+  <!---------------------------- FOOTER ENDS ------------------------->
+  </body>
