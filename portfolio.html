@@ -130,6 +130,17 @@
     .secondary{
         font-family: Monaco;
     }
+
+    @media screen and (min-width: 768px) and (max-width : 1199px){
+        .header-container{
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self:flex-start;
+            padding-right: 32px; 
+            padding-left: 32px;
+        }
+    }
 </style>
 
 <!--PROJECT STYLING-->
@@ -247,8 +258,9 @@
 
     .image-container{
         max-width: 400px;
+        max-height: 400px;
         width: 100%; /* You can adjust the size as needed */
-        height: auto; /* Same value as width to create a square */
+        height: 100%; /* Same value as width to create a square */
         overflow: hidden;
         display: inline-block;
     }
