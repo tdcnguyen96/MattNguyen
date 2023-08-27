@@ -1,15 +1,12 @@
-<!-- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>Navigation Bar</title>
-</head> -->
-
 <!-- BODY STYLING -->
 <style>
-    body {
-      margin: 0;
-      font-family: Helvetica, sans-serif;
+  body {
+        margin: 0;
+        font-family: Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 </style>
 
@@ -17,13 +14,13 @@
 <style>
     .navbar {
       background-color: #fff; /* Change this to your desired background color */
-      padding: 12px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       max-width: 1440px;
       margin: 0 auto;
       border-bottom: 1.5px solid #D3D6DB;
+      width: 100%;
     }
     .logo {
       padding-top: 0px;
@@ -34,6 +31,18 @@
     .logo h1{
         letter-spacing: 2px;
         text-transform:uppercase;
+        color: #000;
+    }
+
+    .logo h1 a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .logo h1 a:hover{
+        letter-spacing: 2px;
+        text-transform:uppercase;
+        color: #FF7262;
     }
 
     .logo img {
@@ -216,8 +225,9 @@
       line-height: 200%;
     }
     .changing-text-rotating-h1 {
-      font-size: 72px; 
-      color: #000
+      font-size: 70px; 
+      color: #000;
+      width: 100%
      }
 
   }
@@ -468,7 +478,7 @@
       padding: 32px;
     }
 
-    button {
+    .button {
       display: block;
       margin: 5px;
       padding: 32px;
@@ -580,13 +590,12 @@
 <!------------------ NAV BAR STARTS -------------------->
     <div class="navbar">
       <div class="logo">
-        <h1>Matt Nguyen</h1>
+        <h1><a href="index.html">Matt Nguyen</a></h1>
       </div>
       <div class="nav-links">
         <a href="#" class="active">Home</a>
-        <a href="#">About Me</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Resume</a>
+        <a href="AboutMe.html">About Me (Resume)</a>
+        <a href="portfolio.html">Portfolio</a>
       </div>
     </div>
 <!-------------------- NAV BAR ENDS ------------------>
