@@ -541,8 +541,17 @@
 
   .contact-section p{
     font-family: 'monaco';
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
+    color: #595959;
+  }
+
+  .contact-section a{
+    font-family: 'monaco';
+    font-size: 16px;
+    font-weight: bold;
+    color: #F24E1E;
+    text-decoration: none;
   }
 
   @media screen and (min-width: 768px) and (max-width : 1199px){
@@ -583,6 +592,11 @@
     color: #F24E1E;
     text-decoration: none;
   }
+
+  small{
+    font-size: 16px;
+  }
+
   }
 </style>
 
@@ -593,9 +607,10 @@
         <h1><a href="index.html">Matt Nguyen</a></h1>
       </div>
       <div class="nav-links">
-        <a href="#" class="active">Home</a>
-        <a href="aboutMe.html">About Me (Resume)</a>
-        <a href="portfolio.html">Portfolio</a>
+        <a href="index.html" class="active">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="resume.html">Resume</a>
+          <a href="aboutMe.html">About Me</a>
       </div>
     </div>
 <!-------------------- NAV BAR ENDS ------------------>
@@ -653,7 +668,7 @@
         }
       }
       
-      setInterval(changeText, 2000); // Change text every 3 seconds
+      setInterval(changeText, 1000); // Change text every 3 seconds
     </script>
 
 <!----------------------- HERO SECTION ENDS -------------------->
@@ -686,72 +701,72 @@
 <!-------------------- SCROLL ARROW INDICATOR ENDS -------------------->
 
 <!---------------------------- CONTENT 1 STARTS: CURRENT JOB ------------------------->
-<div class="content-container hidden" id="currentJob">
-  <div class="content-text fade-slide-left" id="currentJobText">
-    <h1 class ="text-thin-h1">I am the UX Design Manager at JSX. An aviation industry disruptor.</h1> 
-    <p class="secondaryText">I focus on creating human centered and data driven designs backed by research and user tests. I manage both web and mobile platforms while leading multiple teams of developers and designers.</p>
-  </div>
-  <div class="column">
-    <div class="image-container fade-slide-right" id="currentJobImg">
-      <img src="assets/Frame 1.png" alt="image of matthew">
+  <div class="content-container hidden" id="currentJob">
+    <div class="content-text fade-slide-left" id="currentJobText">
+      <h1 class ="text-thin-h1">I am the UX Design Manager at JSX. An aviation industry disruptor.</h1> 
+      <p class="secondaryText">I focus on creating human centered and data driven designs backed by research and user tests. I manage both web and mobile platforms while leading multiple teams of developers and designers.</p>
+    </div>
+    <div class="column">
+      <div class="image-container fade-slide-right" id="currentJobImg">
+        <img src="assets/Frame 1.png" alt="image of matthew">
+      </div>
     </div>
   </div>
-</div>
-    
-<script>
-  const hiddenComponent = document.getElementById("currentJob");
+      
+  <script>
+    const hiddenComponent = document.getElementById("currentJob");
 
-  function revealComponent() {
-    const scrollPosition = window.scrollY;
-    const componentPosition = hiddenComponent.offsetTop;
-    const windowHeight = window.innerHeight;
+    function revealComponent() {
+      const scrollPosition = window.scrollY;
+      const componentPosition = hiddenComponent.offsetTop;
+      const windowHeight = window.innerHeight;
 
-    if (scrollPosition + windowHeight >= componentPosition) {
-      hiddenComponent.classList.add("visible");
-      hiddenComponent.classList.remove("hidden");
-      window.removeEventListener("scroll", revealComponent);
+      if (scrollPosition + windowHeight >= componentPosition) {
+        hiddenComponent.classList.add("visible");
+        hiddenComponent.classList.remove("hidden");
+        window.removeEventListener("scroll", revealComponent);
+      }
     }
-  }
 
-  function slideContentFromLeft() {
-    const component = document.getElementById("currentJobText");
+    function slideContentFromLeft() {
+      const component = document.getElementById("currentJobText");
 
-    const scrollPosition = window.scrollY;
-    const componentPosition = hiddenComponent.offsetTop;
-    const windowHeight = window.innerHeight;
+      const scrollPosition = window.scrollY;
+      const componentPosition = hiddenComponent.offsetTop;
+      const windowHeight = window.innerHeight;
 
-    if (scrollPosition + windowHeight >= componentPosition) {
-      setTimeout(function() {
-        component.style.opacity = "1";
-        component.style.transform = "translateX(0)";
-      }, 300); // Adjust the timeout value to control the delay before the animation starts
+      if (scrollPosition + windowHeight >= componentPosition) {
+        setTimeout(function() {
+          component.style.opacity = "1";
+          component.style.transform = "translateX(0)";
+        }, 300); // Adjust the timeout value to control the delay before the animation starts
 
-      window.removeEventListener("scroll", revealComponent);
+        window.removeEventListener("scroll", revealComponent);
+      }
     }
-  }
 
-  function slideContentFromRight() {
-    const component = document.getElementById("currentJobImg");
+    function slideContentFromRight() {
+      const component = document.getElementById("currentJobImg");
 
-    const scrollPosition = window.scrollY;
-    const componentPosition = hiddenComponent.offsetTop;
-    const windowHeight = window.innerHeight;
+      const scrollPosition = window.scrollY;
+      const componentPosition = hiddenComponent.offsetTop;
+      const windowHeight = window.innerHeight;
 
-    if (scrollPosition + windowHeight >= componentPosition) {
-      setTimeout(function() {
-        component.style.opacity = "1";
-        component.style.transform = "translateX(0)";
-      }, 300); // Adjust the timeout value to control the delay before the animation starts
+      if (scrollPosition + windowHeight >= componentPosition) {
+        setTimeout(function() {
+          component.style.opacity = "1";
+          component.style.transform = "translateX(0)";
+        }, 300); // Adjust the timeout value to control the delay before the animation starts
 
-      window.removeEventListener("scroll", revealComponent);
+        window.removeEventListener("scroll", revealComponent);
 
+      }
     }
-  }
 
-  window.addEventListener("scroll", revealComponent);
-  window.addEventListener("scroll", slideContentFromLeft);
-  window.addEventListener("scroll", slideContentFromRight);
-</script>
+    window.addEventListener("scroll", revealComponent);
+    window.addEventListener("scroll", slideContentFromLeft);
+    window.addEventListener("scroll", slideContentFromRight);
+  </script>
 <!---------------------------- CONTENT 1 END: CURRENT JOB ------------------------->
 
 <!---------------------------- CONTENT 2 STARTS: EXPERIENCE ------------------------->
@@ -764,7 +779,7 @@
   </div>
   <div class="content-text fade-slide-left" id="experienceText">
     <h1 class ="text-thin-h1">Over 6 years, I've worked in development, research, and design.</h1> 
-    <p class="secondaryText">As a product designer I have worked with developers, marketers, and clients for ground breaking and industry disrupting clients.</p>
+    <p class="secondaryText">As a product designer I have worked with other designers, developers, and marketers for ground breaking and industry disrupting clients.</p>
   </div>
 </div>
     
@@ -830,11 +845,23 @@
     <h1>Want to see more?</h1>
   </div>
   <div class="button-column">
-    <button class="button">View Portfolio</button>
-    <button class="button">About Me</button>
-    <button class="button">Download Resume</button>
+    <button class="button" onclick="navigateToPortfolio()">View Portfolio</button>
+    <button class="button" onclick="navigateToAboutme()">About Me</button>
+    <button class="button" onclick="navigateToResume()">Download Resume</button>
   </div>
 </div>
+
+<script>
+  function navigateToPortfolio() {
+    window.location.href = 'portfolio.html';
+  }
+  function navigateToAboutme() {
+    window.location.href = 'aboutMe.html';
+  }
+  function navigateToResume() {
+    window.location.href = 'resume.html';
+  }
+</script>
 
 <!------------------------- LEARN MORE BUTTONS ENDS ----------------------------->
 
@@ -848,7 +875,7 @@
     <a href="#">Behance</a>
     <a href="#">LinkedIn</a>
   </div>
-  <smal style="color: #595959;">Powered by Square Spa- oh. wait... look at that. Nevermind. This website is designed and developed by me. </small>
+  <small style="color: #595959;">Powered by Square Spa- oh. wait... look at that. Nevermind. This website is designed and developed by Matt Nguyen. </small>
 </div>
 <!---------------------------- FOOTER ENDS ------------------------->
 
